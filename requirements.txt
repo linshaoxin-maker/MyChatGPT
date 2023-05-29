@@ -1,3 +1,2 @@
-gradio>=3.23
 requests[socks]
 mdtex2html

@@ -1,12 +1,13 @@
 # API_KEY = "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" 此key无效
-API_KEY = "sk-此处填API秘钥"
-API_URL = "https://api.openai.com/v1/chat/completions"
-
+# API_KEY = "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"
+API_KEY = "sk-DseIk8JwyEsOVDEAVaD4vlNZM1vV8hOv2MMhpOfbrIb98tsF"
+# API_URL = "https://api.openai.com/v1/chat/completions"
+API_URL = "https://api.chatanywhere.cn/v1/chat/completions"
 # 改为True应用代理
 USE_PROXY = False
 if USE_PROXY:
     # 代理网络的地址，打开你的科学上网软件查看代理的协议(socks5/http)、地址(localhost)和端口(11284)
-    proxies = { "http": "socks5h://localhost:11284", "https": "socks5h://localhost:11284", } 
+    proxies = {"http": "socks5h://127.0.0.1:7890", "https": "socks5h://127.0.0.1:7890", }
     print('网络代理状态：运行。')
 else:
     proxies = None
@@ -16,13 +17,14 @@ else:
 TIMEOUT_SECONDS = 20
 
 # 网页的端口, -1代表随机端口
-WEB_PORT = -1
+WEB_PORT = 19023
 
 # 如果OpenAI不响应（网络卡顿、代理失败、KEY失效），重试的次数限制
 MAX_RETRY = 2
 
 # 选择的OpenAI模型是（gpt4现在只对申请成功的人开放）
-LLM_MODEL = "gpt-3.5-turbo"
+# LLM_MODEL = "gpt-3.5-turbo"
+LLM_MODEL = "gpt-4"
 
 # 检查一下是不是忘了改config
 if API_KEY == "sk-此处填API秘钥":
